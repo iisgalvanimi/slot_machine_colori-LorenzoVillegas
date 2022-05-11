@@ -9,7 +9,7 @@ let myInterval;
 let num = 0;
 
 function startCounter(){
-    myInterval = setInterval( gambling , 4000);
+    myInterval = setInterval( gambling , 2000);
 
     if (typeof(myInterval) != "undefined") { return ; }
   } 
@@ -29,7 +29,6 @@ function fineTimer(){
     if ( num <= 3) {
         for ( let i = 0; i < elementsClass.length; i++) {
             let rnd = Math.random()* 3;
-            
             rnd = Math.trunc(rnd);
             if (rnd == 1) {
                 elements_array[i].style.backgroundColor = "#FF0000";
@@ -47,7 +46,7 @@ function fineTimer(){
     }
 
     if (num > 3) {
-        if (quad0.style.backgroundColor = quad1.style.backgroundColor) {
+        if (quad0.style.backgroundColor == quad1.style.backgroundColor) {
             message.innerHTML = "Hai vinto!"
             num = 0;
             fineTimer();
